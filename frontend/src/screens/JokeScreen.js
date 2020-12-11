@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Row, Col, ListGroup, Card, Button } from 'react-bootstrap'
-import jokes from '../jokes'
+import { Row, ListGroup } from 'react-bootstrap'
+import axios from 'axios'
 
 const JokeScreen = ({ match }) => {
-  const joke = jokes.find((j) => j._id === match.params.id)
+  const [joke, setJoke] = useState([])
+
+  useEffect(() => {
+    const fetchJoke = async () => {
+      const { data } = await axios.get(`/api/jokes/${match.params.id}`)
+
+      setJoke(data)
+    }
+
+    fetchJoke()
+  }, [])
 
   return (
     <>

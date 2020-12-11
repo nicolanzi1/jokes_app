@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import jokes from '../jokes'
 import Joke from '../components/Joke'
+import axios from 'axios'
 
 const HomeScreen = () => {
+  const [jokes, setJokes] = useState([])
+
+  useEffect(() => {
+    const fetchJokes = async () => {
+      const { data } = await axios.get('/api/jokes')
+
+      setJokes(data)
+    }
+
+    fetchJokes()
+  }, [])
+
   return (
     <>
       <h1>All Jokes</h1>
