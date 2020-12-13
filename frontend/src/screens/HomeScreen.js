@@ -1,33 +1,50 @@
 import React, { useState, useEffect } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import Navbar from '../components/Navbar/Navbar'
+import Sidebar from '../components/Sidebar/Sidebar'
+// import { Col, Row } from 'react-bootstrap'
 import Joke from '../components/Joke'
-import axios from 'axios'
+// import axios from 'axios'
 
 const HomeScreen = () => {
-  const [jokes, setJokes] = useState([])
+  const [isOpen, setIsOpen] = useState(false)
 
-  useEffect(() => {
-    const fetchJokes = async () => {
-      const { data } = await axios.get('/api/jokes')
-
-      setJokes(data)
-    }
-
-    fetchJokes()
-  }, [])
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <>
-      <h1>All Jokes</h1>
-      <Row>
-        {jokes.map((joke) => (
-          <Col sm={12} md={6} lg={4} xl={3}>
-            <Joke joke={joke} />
-          </Col>
-        ))}
-      </Row>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
     </>
   )
 }
+
+// const HomeScreen = () => {
+//   const [jokes, setJokes] = useState([])
+
+//   useEffect(() => {
+//     const fetchJokes = async () => {
+//       const { data } = await axios.get('/api/jokes')
+
+//       setJokes(data)
+//     }
+
+//     fetchJokes()
+//   }, [])
+
+//   return (
+//     <>
+//       <h1>All Jokes</h1>
+//       <Row>
+//         {jokes.map((joke) => (
+//           <Col sm={12} md={6} lg={4} xl={3}>
+//             <Joke joke={joke} />
+//           </Col>
+//         ))}
+//       </Row>
+//     </>
+//   )
+// }
 
 export default HomeScreen

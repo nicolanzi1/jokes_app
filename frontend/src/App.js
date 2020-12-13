@@ -1,13 +1,11 @@
 import React from 'react'
-import Navbar from './components/Navbar/Navbar'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Sidebar from './components/Sidebar/Sidebar'
+import HomeScreen from './screens/HomeScreen'
 
 const App = () => {
   return (
     <Router>
-      <Sidebar />
-      <Navbar />
+      <HomeScreen />
     </Router>
   )
 }
