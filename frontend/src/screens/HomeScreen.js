@@ -6,6 +6,7 @@ import Joke from '../components/Joke'
 import HeroSection from '../components/HeroSection/HeroSection'
 import InfoSection from '../components/InfoSection/InfoSection'
 import { homeObjOne } from '../components/InfoSection/Data'
+import Footer from '../components/Footer/Footer'
 // import axios from 'axios'
 
 const HomeScreen = () => {
@@ -21,6 +22,7 @@ const HomeScreen = () => {
       <Navbar toggle={toggle} />
       <HeroSection />
       <InfoSection {...homeObjOne} />
+      <Footer />
     </>
   )
 }

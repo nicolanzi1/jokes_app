@@ -46,7 +46,11 @@ export const TextWrapper = styled.div`
 `
 export const TopLine = styled.p`
   color: gold;
-  font-size: 16px;
+  border-bottom: ${({ primary }) =>
+    primary ? '2px solid #fff' : '2px solid #010606'};
+  width: 300px;
+  padding: 10px;
+  font-size: 24px;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
