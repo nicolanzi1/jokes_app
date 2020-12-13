@@ -1,5 +1,6 @@
 import { FaBars } from 'react-icons/fa'
 import logo from '../../images/fathom3logo.png'
+import { animateScroll as scroll } from 'react-scroll'
 import {
   Nav,
   NavbarContainer,
@@ -8,20 +9,34 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavBtn,
-  NavBtnLink,
 } from './NavbarElements'
 
 const Navbar = ({ toggle }) => {
+  const toggleHome = () => {
+    scroll.scrollToTop()
+  }
+
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/" src={logo}></NavLogo>
+          <NavLogo to="/" src={logo} onClick={toggleHome}></NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
+            <NavItem>
+              <NavLinks
+                to="jokes"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-120}
+              >
+                Jokes
+              </NavLinks>
+            </NavItem>
             <NavItem>
               <NavLinks to="identity">Identity</NavLinks>
             </NavItem>
@@ -37,13 +52,7 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="more">More</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="jokes">Jokes</NavLinks>
-            </NavItem>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
-          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

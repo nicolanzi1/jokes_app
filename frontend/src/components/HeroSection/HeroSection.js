@@ -29,9 +29,6 @@ const HeroSection = () => {
         <HeroH1>We Design.</HeroH1>
         <HeroH1>We Develop.</HeroH1>
         <HeroH1>We Deliver.</HeroH1>
-        {/* <HeroP>
-          Find out about the products & services we make to help save lifes.
-        </HeroP> */}
         <HeroBtnWrapper>
           <Button
             to="find"

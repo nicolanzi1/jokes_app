@@ -48,37 +48,47 @@ export const HeroH1 = styled.h1`
     width: 450px;
     padding-bottom: 30px;
     border-bottom: 4px solid gold;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   @media screen and (max-width: 768px) {
     font-size: 40px;
+    margin: auto;
   }
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
+    margin: auto;
   }
 `
-export const HeroP = styled.p`
-  margin-top: 24 px;
-  color: #fff;
-  font-size: 24px;
-  text-align: left;
-  max-width: 600px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 24px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 18px;
-  }
-`
 export const HeroBtnWrapper = styled.div`
   margin-top: 32px;
   margin-left: -340px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding-top: 30px;
+    margin: 0 auto;
+  }
 `
 export const ArrowForward = styled(MdArrowForward)`
   margin-left: 8px;

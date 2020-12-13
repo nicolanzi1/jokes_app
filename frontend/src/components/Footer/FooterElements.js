@@ -69,19 +69,33 @@ export const FooterText = styled.p`
   font-size: 16px;
   font-weight: bold;
   color: #fff;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+    line-height: 1.5;
+  }
 `
 export const FooterBtnWrapper = styled.div`
   margin: 16px;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 10px 0;
+  }
 `
 export const FooterBtn = styled.div`
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `
 export const FooterBtnLink = styled(Link)`
   background: gold;
