@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Sidebar from '../components/Sidebar/Sidebar'
 // import { Col, Row } from 'react-bootstrap'
 import Joke from '../components/Joke'
+import HeroSection from '../components/HeroSection/HeroSection'
 // import axios from 'axios'
 
 const HomeScreen = () => {
@@ -16,6 +17,7 @@ const HomeScreen = () => {
     <>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
+      <HeroSection />
     </>
   )
 }
