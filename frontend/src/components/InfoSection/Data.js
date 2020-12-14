@@ -8,7 +8,7 @@ export const homeObjOne = {
   topLine: 'Jokes Break',
   headline: 'Because we all need a laugh sometimes',
   description: 'Here you will find some of our greatest jokes...',
-  buttonLabel: 'Get Started',
+  buttonLabel: 'Get Joke',
   imgStart: true,
   img: Img1,
   alt: 'Joke Break',
