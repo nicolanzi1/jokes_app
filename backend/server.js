@@ -1,6 +1,6 @@
-const express = require('express')
-const dotenv = require('dotenv')
-const jokes = require('./data/jokes')
+import express from 'express'
+import dotenv from 'dotenv'
+import jokes from './data/jokes.js'
 
 dotenv.config()
 

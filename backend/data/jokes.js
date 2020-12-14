@@ -2299,4 +2299,4 @@ const jokes = [
   },
 ]
 
-module.exports = jokes
+export default jokes
