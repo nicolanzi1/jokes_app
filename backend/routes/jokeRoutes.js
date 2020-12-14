@@ -32,4 +32,18 @@ router.get(
   })
 )
 
+router.get(
+  '/random',
+  asyncHandler(async (req, res) => {
+    const random = await Joke.aggregate([{ $sample: { size: 1 } }])
+
+    if (random) {
+      res.json(random)
+    } else {
+      res.status(404)
+      throw new Error('Joke not found')
+    }
+  })
+)
+
 export default router

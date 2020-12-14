@@ -56,7 +56,6 @@ const InfoSection = ({
                     {buttonLabel}
                   </Button>
                 </BtnWrap>
-                <Joke />
               </TextWrapper>
             </Column1>
             <Column2>
@@ -67,6 +66,7 @@ const InfoSection = ({
           </InfoRow>
         </InfoWrapper>
       </InfoContainer>
+      {/* <Joke /> */}
     </>
   )
 }
