@@ -1,3 +1,4 @@
+import Joke from '../Joke/Joke'
 import { Button } from '../ButtonElement'
 import {
   InfoContainer,
@@ -55,6 +56,7 @@ const InfoSection = ({
                     {buttonLabel}
                   </Button>
                 </BtnWrap>
+                <Joke />
               </TextWrapper>
             </Column1>
             <Column2>
