@@ -1,8 +1,10 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import colors from 'colors'
+import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import connectDB from './config/db.js'
-import jokes from './data/jokes.js'
+
+import jokeRoutes from './routes/jokeRoutes.js'
 
 dotenv.config()
 
@@ -14,14 +16,11 @@ app.get('/', (req, res) => {
   res.send('API is running')
 })
 
-app.get('/api/jokes', (req, res) => {
-  res.json(jokes)
-})
+app.use('/api/jokes', jokeRoutes)
 
-app.get('/api/jokes/:id', (req, res) => {
-  const joke = jokes.find((j) => j._id === req.params.id)
-  res.json(joke)
-})
+app.use(notFound)
+
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000
 
