@@ -1,4 +1,3 @@
-import Joke from '../Joke/Joke'
 import { Button } from '../ButtonElement'
 import {
   InfoContainer,
@@ -66,7 +65,6 @@ const InfoSection = ({
           </InfoRow>
         </InfoWrapper>
       </InfoContainer>
-      {/* <Joke /> */}
     </>
   )
 }

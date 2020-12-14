@@ -1,15 +1,18 @@
-import { Card } from 'react-bootstrap'
+import {
+  JokeContainer,
+  JokeWrapper,
+  JokeSetup,
+  JokePunch,
+} from './JokeElements'
 
 const Joke = ({ joke }) => {
   return (
-    <Card.Body>
-      <a href={`/jokes/${joke._id}`}>
-        <Card.Title as="div">
-          <strong>{joke.setup}</strong>
-        </Card.Title>
-        <Card.Text as="div">{joke.punchline}</Card.Text>
-      </a>
-    </Card.Body>
+    <JokeContainer>
+      <JokeWrapper>
+        <JokeSetup>{joke.setup}</JokeSetup>
+        <JokePunch>{joke.punchline}</JokePunch>
+      </JokeWrapper>
+    </JokeContainer>
   )
 }
 

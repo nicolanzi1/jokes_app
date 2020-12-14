@@ -8,6 +8,8 @@ import InfoSection from '../components/InfoSection/InfoSection'
 import { homeObjOne } from '../components/InfoSection/Data'
 import Footer from '../components/Footer/Footer'
 import Joke from '../components/Joke/Joke'
+import Message from '../components/Message'
+import Loader from '../components/Loader'
 import { listJokes } from '../actions/jokeActions'
 
 const HomeScreen = () => {
@@ -34,9 +36,9 @@ const HomeScreen = () => {
       <InfoSection {...homeObjOne} />
       <h1>All Jokes</h1>
       {loading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3>
+        <Message variant="danger">{error}</Message>
       ) : (
         <Row>
           {jokes.map((joke) => (
