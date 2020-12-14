@@ -7,7 +7,6 @@ import {
   VideoBg,
   HeroContent,
   HeroH1,
-  HeroP,
   HeroBtnWrapper,
   ArrowForward,
   ArrowRight,

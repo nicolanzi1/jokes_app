@@ -32,6 +32,9 @@ router.get(
   })
 )
 
+// @desc    Fetch random joke
+// @route   GET /api/jokes/random
+// @access  Public
 router.get(
   '/random',
   asyncHandler(async (req, res) => {
